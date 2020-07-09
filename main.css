@@ -1,0 +1,139 @@
+/* 21961093장민주 */
+
+/* navvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+#me{padding: 30px;
+   margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+width: 100%;}
+
+#me td{padding-top: 10px;
+font-size: 12px; text-align: center;}
+
+#ma{padding: 10px;
+  font-size: 15px;
+  width: 50%;
+   text-align: center;
+  background-color: rgb(209, 238, 215); }
+
+/*리크루팅ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ */
+
+  .img{
+    position: relative;
+    background-image: url(./img/min.gif);
+    background-repeat:repeat;
+    height: 580px;
+    background-size: cover;
+    color:rgba(230, 255, 219, 0.4);
+    background-attachment: fixed;
+  }
+
+  .img-cover{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(239, 254, 232, 0.5);
+   z-index:1;
+  }
+
+  .img-cover h2{
+     position: absolute;
+     top:40%;
+     left:25%;
+     transform: translate(-50%, -50%);
+     font-size:40px;
+     color:rgb(29, 61, 44);
+     z-index: 2;
+     text-align: left;}
+
+     @media ( max-width: 700px ) {
+       .img-cover h2{left:40%;}}
+
+
+     .img-cover h3{
+        position: absolute;
+        top:55%;
+        left:25%;
+        transform: translate(-50%, -50%);
+        font-size:20px;
+        color:rgb(29, 61, 44);
+        z-index: 2;
+        text-align: left;}
+
+        @media ( max-width: 700px ) {
+          .img-cover h3{left:40%;}}
+/* mainnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+
+
+
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-gap: 10px;
+    margin-bottom: 200px;
+  }
+  .grid-container img{
+    width: 100%; /* need to overwrite inline dimensions */
+    height: 100%;}
+
+/* hover styles */
+.location-listing {
+  position: relative;
+}
+
+.location-image {
+  line-height: 0;
+  overflow: hidden;
+  border: solid 5px rgb(203, 231, 208);
+  border-radius: 5px;
+}
+
+.location-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+transition: transform 0.3s ease-in;
+}
+
+.location-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(0, 91, 57, 0.4);
+  color: white;
+
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-listing:hover .location-title {
+  opacity: 1;
+}
+
+.location-listing:hover .location-image img {
+  filter: blur(2px); transform: scale(1.4);
+}
+
+
+/* for touch screen devices */
+@media (hover: none) {
+  .location-title {
+    opacity: 1;
+  }
+  .location-image img {
+    filter: blur(2px);
+  }
+}
